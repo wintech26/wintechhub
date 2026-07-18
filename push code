@@ -1,0 +1,2 @@
+$env:Path += ";C:\Program Files\Git\cmd;C:\Program Files\nodejs"  
+git add .; git commit -m "update"; git push -u origin main; npm run build; npm run deploy

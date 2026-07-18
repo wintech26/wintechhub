@@ -910,7 +910,7 @@ function Home() {
                 <AnimatedLogo />
               </div>
               <span className="inline-block text-sm font-semibold uppercase tracking-wider text-accent transition-[letter-spacing] duration-300 hover:tracking-wider">
-                Why Choose Us
+                Why Choose Us.
               </span>
               <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold text-primary">
                 Trusted by 800+ businesses across Mysore.
