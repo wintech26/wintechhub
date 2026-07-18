@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-  "postbuild": "cp dist/index.html dist/404.html",
-  "deploy": "gh-pages -d dist"
+    "postbuild": "cp dist/index.html dist/404.html",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
