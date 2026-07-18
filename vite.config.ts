@@ -1,21 +1,21 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import path from "path";
+import viteReact from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import tsConfigPaths from "vite-tsconfig-paths";
+import { tanstackRouter } from "@tanstack/router-plugin/vite";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
-  server: {
-    host: "::",
-    port: 8080,
-    hmr: {
-      overlay: false,
-    },
-  },
-  plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
+  // This repo is "wintech", so GitHub Pages serves it at
+  // https://zeehaancode21.github.io/wintech/ — NOT the domain root.
+  // base must match the repo name exactly (with leading and trailing slash).
+  base: "/",
+  plugins: [
+    tanstackRouter({
+      target: "react",
+      autoCodeSplitting: true,
+    }),
+    viteReact(),
+    tailwindcss(),
+    tsConfigPaths({ projects: ["./tsconfig.json"] }),
+  ],
 });
